@@ -15,3 +15,7 @@ q.popleft()
 
 ## 재귀함수
 => 종료조건 명시해줄것!!!  
+
+## 그래프표현
+array vs linked list 소스코드 참고.  
+
