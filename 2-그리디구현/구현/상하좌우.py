@@ -1,3 +1,5 @@
+# 나중에 방향벡터 사용해 다시 한 번 풀어보자!
+
 n = int(input())
 dirs = input().split()
 
