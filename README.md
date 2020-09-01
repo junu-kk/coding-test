@@ -6,3 +6,14 @@
 
 ## 참고 레포
 [Link](https://github.com/ndb796)
+
+## Python tips
+- iterating through two lists in parallel : zip함수를 쓴다.
+```
+as = [1, 2, 3]
+bs = [4, 5, 6]
+for a, b in zip(as, bs):
+    print(a, b)
+
+# 근데 그냥 a_b = [(1,4), (2,5), (3,6)] 으로 선언하는 것도 방법.
+```
