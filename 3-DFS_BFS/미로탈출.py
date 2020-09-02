@@ -10,6 +10,15 @@ n m
 
 output
 최소 이동 칸 수
+
+왜 9가 나오지??
+왜 다음의 경우 0이 나오지?
+11111
+00101
+01101
+01001
+01111
+
 '''
 
 from collections import deque
@@ -21,14 +30,13 @@ for _ in range(n):
     graph.append(list(map(int, input())))
 print(graph)
 
-# 방문리스트
-visited = [[False]*m for _ in range(n)]
-visited[0][0] = True
+# 방문리스트 : graph가 곧 방문리스트이기에 필요 없다.
 
 # 방향벡터
 dr = [-1, 0, 1, 0]
 dc = [0, 1, 0, -1]
-
+# dr = [-1, 1, 0, 0]
+# dc = [0, 0, -1, 1]
 # bfs 함수
 '''
 1,1부터 n,n까지 dfs를 하는데
@@ -49,8 +57,8 @@ def bfs(r,c):
             dest_r = r + dr[i]
             dest_c = c + dc[i]
 
-            # 범위를 벗어났거나 벽인 경우 킵 고잉
-            if 0 < dest_r <= n or 0 < dest_c <= m or graph[dest_r][dest_c] == 0:
+            # 범위를 벗어났거나 벽인 경우 다음 루프로.
+            if dest_r >= n or dest_r < 0 or dest_c >= m or dest_c < 0 or graph[dest_r][dest_c] == 0:
                 continue
             
             # 그렇지 않다면.. 방문하지 않은 경우만 최단거리 기록
