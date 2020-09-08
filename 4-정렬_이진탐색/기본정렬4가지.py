@@ -56,3 +56,6 @@ print(selectionSort(original_array))
 print(insertionSort(original_array))
 print(quickSort(original_array))
 print(countSort(original_array))
+
+# 그치만 파이썬에선 다 필요없다
+print(sorted(original_array))
