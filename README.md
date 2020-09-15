@@ -23,3 +23,7 @@ for a, b in zip(as, bs):
 hi = '123456'
 bye = list(map(int, hi)) #[1,2,3,4,5,6]
 ```
+
+
+## 일반 tips
+- 효율성 점수가 없는 문제는 구현을 하는데에 초점을 두자. 괄호변환 문제의 get_slicepoint 함수를 그렇게 구현할걸.
