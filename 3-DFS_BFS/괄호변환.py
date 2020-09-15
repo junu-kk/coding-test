@@ -24,10 +24,15 @@ def is_ol(s):
                 stack.pop()
     return True
 
-def get_slicepoint(s): # 균형잡힌 괄호 문자열
+def get_slicepoint(s): # 균형잡힌 괄호 문자열까지의 자르는 그 포인트를 리턴
+    count = 0
     for i in range(len(s)):
-        if s[i] != s[0]:
-            return 2*i - 1
+        if s[i] == '(':
+            count += 1
+        else:
+            count -= 1
+        if count == 0:
+            return i
     
 
 
