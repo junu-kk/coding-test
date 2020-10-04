@@ -3,6 +3,12 @@ def find_parent(parent, x): # x의 부모를 찾아 떠나는 함수
         return find_parent(parent, parent[x])
     return x
 
+# 경로압축기법 -> 시간복잡도 개선
+def better_find_parent(parent, x):
+    if parent[x] != x: # 부모를 끝까지 갈때까지 갱신시키기. 역시 재귀 활용.
+        parent[x] = find_parent(parent, parent[x])
+    return parent[x]
+
 def union_parent(parent, a, b): # a와 b를 union해주는 함수
     a = find_parent(parent, a)
     b = find_parent(parent, b)
