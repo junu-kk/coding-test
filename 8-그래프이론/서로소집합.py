@@ -14,7 +14,7 @@ def union_parent(parent, a, b): # a와 b를 union해주는 함수
 vn, en = map(int, input().split())
 parent = [0] * (vn+1)
 
-for i in range(1, v+1):
+for i in range(1, vn+1):
     parent[i] = i # 부모테이블 초기세팅 : 자기 부모는 자신
 
 for _ in range(en):
