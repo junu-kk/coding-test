@@ -24,6 +24,21 @@ hi = '123456'
 bye = list(map(int, hi)) #[1,2,3,4,5,6]
 ```
 
+- 힙
+  - 우선순위큐가 필요할 경우, 힙을 쓰자. 기본은 최소힙.
+  - 최대힙이 필요할 경우 마이너스 붙이면 됨.
+  - 시간복잡도 면에서 이득.
+```
+import heapq
+q = []
+heapq.heappush(q, (10, '우선순위high'))
+heapq.heappush(q, (30, '우선순위low'))
+heapq.heappush(q, (20, '우선순위mid'))
+
+print(heapq.heappop(q)) # 우선순위high
+print(heapq.heappop(q)) # 우선순위mid
+print(heapq.heappop(q)) # 우선순위low
+```
 
 ## 일반 tips
 - 효율성 점수가 없는 문제는 구현을 하는데에 초점을 두자. 괄호변환 문제의 get_slicepoint 함수를 그렇게 구현할걸.
