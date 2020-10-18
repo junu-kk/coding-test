@@ -1,3 +1,73 @@
+from itertools import combinations
+BLANK = 'X'; blanks = []
+OBSTACLE = 'O'
+TEACHER = 'T'; teachers = []
+STUDENT = 'S'
+caught = False
+
+n = int(input())
+graph = []
+
+
+
+for i in range(n):
+    graph.append(list(input().split()))
+    for j in range(n):
+        if graph[i][j] == TEACHER:
+            teachers.append((i, j))
+        if graph[i][j] == BLANK:
+            blanks.append((i,j))
+def gamsi(r, c, direction):
+    if direction == 0: # 왼쪽감시
+        while c >= 0:
+            if graph[r][c] == STUDENT:
+                return True
+            if graph[r][c] == OBSTACLE:
+                return False
+            c -= 1
+    if direction == 1: # 오른쪽감시
+        while c < n:
+            if graph[r][c] == STUDENT:
+                return True
+            if graph[r][c] == OBSTACLE:
+                return False
+            c += 1
+    if direction == 2: # 아래감시
+        while r >= 0:
+            if graph[r][c] == STUDENT:
+                return True
+            if graph[r][c] == OBSTACLE:
+                return False
+            r -= 1
+    if direction == 3: # 위감시
+        while r < n:
+            if graph[r][c] == STUDENT:
+                return True
+            if graph[r][c] == OBSTACLE:
+                return False
+            r += 1
+    return False
+
+def process():
+    for r, c in teachers:
+        for i in range(4):
+            if gamsi(r, c, i):
+                return True
+    return False
+
+found = False
+
+for random_obstacles in combinations(blanks, 3):
+    for r, c in random_obstacles:
+        graph[r][c] = OBSTACLE
+    if not process():
+        found = True
+        break
+    for r, c in random_obstacles:
+        graph[r][c] = BLANK
+
+print('YES' if found else 'NO')
+
 # BLANK = 'X'
 # OBSTACLE = 'O'
 # TEACHER = 'T'
