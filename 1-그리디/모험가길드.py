@@ -14,9 +14,14 @@ TODO : 다시풀자!!!!
 
 N = int(input())
 gps = sorted(list(map(int, input().split())), reverse=True)
-i = 0
-answer = 0
-while i < N:
-    answer += 1
-    i += gps[i]
-print(answer)
+
+more_people_please = 0
+groupn = 0
+for i in range(N):
+    if more_people_please == 0:
+        groupn += 1
+        more_people_please = gps[i] - 1
+    else:
+        more_people_please -= 1
+
+print(groupn)
