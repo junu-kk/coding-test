@@ -1,3 +1,5 @@
+# 3개 세우기 : 
+
 BLANK = 0
 WALL = 1
 VIRUS = 2
