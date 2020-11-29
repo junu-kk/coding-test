@@ -9,12 +9,12 @@ for tc in range(int(input())):
     dp = []
     idx = 0
     for i in range(n):
-        dp.append(arr[idx:idx+m]) # 그걸 2차원으로 바꿔줌.
+        dp.append(arr[idx:idx+m]) # 1차원 -> 2차원으로 바꿔줌.
         idx += m
 
-    for j in range(1, m):
-        for i in range(n):
-            if i == 0:
+    for j in range(1, m): # 각 행, 열에 대해
+        for i in range(n): 
+            if i == 0: 
                 left_up = 0
             else:
                 left_up = dp[i-1][j-1]
