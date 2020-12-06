@@ -32,7 +32,7 @@ def main(): # 다익스트라 너무 어렵다. 플로이드 와샬은 쉬운데
                 distance[nr][nc] = cost
                 heapq.heappush(q, (cost, nr, nc))
     
-    return distance[n-1][n-1] # 그래서 끝까지 갔을 때 최소를 출력
+    return distance[nr-1][nc-1] # 그래서 끝까지 갔을 때 최소를 출력
 
-for tc in tcn:
-    main()
+for tc in range(tcn):
+    print(main())
