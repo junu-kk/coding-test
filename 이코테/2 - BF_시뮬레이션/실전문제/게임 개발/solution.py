@@ -1,4 +1,4 @@
-from sys import is_finalizing, stdin
+from sys import stdin
 input = stdin.readline
 
 ds = [(-1, 0), (0, 1), (1, 0), (0, -1)]
