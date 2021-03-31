@@ -1,4 +1,5 @@
 .vscode
 .idea
-.DS_STORE
+.DS_Store
+*.pdf
 test.py
