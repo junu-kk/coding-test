@@ -75,7 +75,7 @@ def solution(n, build_frame):
                 delete_bo(x, y)
 
     answer = []
-    for x in range(n+1):
+    for x in range(n+1):  # 이게 사실 쏘트함수랑 같음.
         for y in range(n+1):
             if jido[x][y] == GIDUNG:
                 answer.append([x, y, GIDUNG])

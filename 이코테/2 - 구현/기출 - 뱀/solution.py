@@ -41,13 +41,11 @@ while True:
     time += 1
     r, c = locs[-1]
     dr, dc = ds[d]
-    r += dr
-    c += dc
-    if does_collide(r, c):
+    if does_collide(r+dr, c+dc):
         break
     # 사과면 popleft 안해줘도 됨.
-    locs.append((r, c))
-    if jido[r][c] == BLANK:
+    locs.append((r+dr, c+dc))
+    if jido[r+dr][c+dc] == BLANK:
         locs.popleft()
     # 처리 후
     if time == cmd_time:
