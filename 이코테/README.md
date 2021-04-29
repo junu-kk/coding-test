@@ -4,7 +4,10 @@
 
 ## case 1
 혼자 힘으로 풀다가 막혀서 해답을 봐야하는 문제들  
-* [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063) : 어떻게 이동하는지 모르겠다.
+* [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063) : 1*2 회전이 막막하다.
+* [공항](https://www.acmicpc.net/problem/10775) : 문제는 풀었는데 시간초과 나서 풀이 봐야함.
+* [최소 편집](https://www.acmicpc.net/problem/15483) : dp_t 어떻게 짜야할지 감이 오지 않음.
+* [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060) : 더 효율적으로 코드 짜는 법?
 
 ## case 2
 해답을 봤는데도 내 풀이가 어디서 틀렸는지 모르겠어서  
