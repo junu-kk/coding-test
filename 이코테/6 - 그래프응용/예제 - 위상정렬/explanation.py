@@ -1,7 +1,7 @@
 from collections import deque
 
 vn, en = map(int, input().split())
-indegree_t = [0] * (vn+1)
+indegree_t = [0] * (vn+1)  # 처음에 모두 0으로 초기화
 graph = [[] for i in range(vn+1)]
 
 for _ in range(en):
