@@ -31,3 +31,14 @@ def rotate_mtrx(mtrx):
 
     return res
 ```
+
+
+* 정렬된 리스트에서 l 이상 r 이하 값 개수 뽑아내기 (O(logN))
+```py
+from bisect import bisect_left as bl, bisect_right as br
+
+def count_by_range(arr, l, r):
+    ri = br(arr, rv)
+    li = bl(arr, lv)
+    return ri-li
+```

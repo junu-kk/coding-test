@@ -4,14 +4,10 @@
 
 ## case 1
 혼자 힘으로 풀다가 막혀서 해답을 봐야하는 문제들  
-* [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063) : 1*2 회전이 막막하다.
-* [공항](https://www.acmicpc.net/problem/10775) : 문제는 풀었는데 시간초과 나서 풀이 봐야함.
-* [최소 편집](https://www.acmicpc.net/problem/15483) : dp_t 어떻게 짜야할지 감이 오지 않음.
-* [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060) : 더 효율적으로 코드 짜는 법?
-* [공유기 설치](https://www.acmicpc.net/problem/2110) : 이진탐색을 적용해야 하는 것 같긴한데 확실히는 잘 모르겠다.
-* [인구 이동](https://www.acmicpc.net/problem/16234) : dfs스러운 탐색인데 잘 모르겠다. 많이 나오는 유형일 것 같으니 확실히 해두자.
-* [최종 순위](https://www.acmicpc.net/problem/2887) : 위상정렬 기본코드는 이해했으나 응용이 어렵다.
-* [행성 터널](https://www.acmicpc.net/problem/2887) : 풀이는 맞는것같은데 메모리 초과가 뜨네
+
+### 이진 탐색
+
+
 ## case 2
 해답을 봤는데도 내 풀이가 어디서 틀렸는지 모르겠어서  
 or 아이디어를 얻고 생각보다 간단하게 풀릴 것 같아서  
@@ -30,6 +26,7 @@ or 아이디어를 얻고 생각보다 간단하게 풀릴 것 같아서
 
 ## case 3
 해답을 봤더니 이해가 되어서, 추후 3회독때 다시 풀 문제들  
+
 ### 그리디
 * 만들 수 없는 금액 -> 그리디하게.
 * 무지의 먹방 라이브 -> 그리디하게.
@@ -41,10 +38,21 @@ or 아이디어를 얻고 생각보다 간단하게 풀릴 것 같아서
 ### DFS_BFS
 * 경쟁적 전염
 * 괄호 변환
+* [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)
+* [인구 이동](https://www.acmicpc.net/problem/16234) : dfs스러운 탐색인데 잘 모르겠다. 많이 나오는 유형일 것 같으니 확실히 해두자.
+
+### 정렬_탐색
+* [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060) -> 효율적으로!
+* [공유기 설치](https://www.acmicpc.net/problem/2110)
 
 ### DP
 * 병사 배치하기
+* [최소 편집](https://www.acmicpc.net/problem/15483)
 
+### 그래프 이론
+* [공항](https://www.acmicpc.net/problem/10775)
+* [최종 순위](https://www.acmicpc.net/problem/2887)
+* [행성 터널](https://www.acmicpc.net/problem/2887)
 
 ## 그냥 궁금한거
 * 무방향, 무가중치 그래프에선 보통 bfs로 푸는 편인데, 다익스트라로는 어떻게 접근할까? 중간을 거치는 것을 어떻게 알지?
@@ -66,3 +74,6 @@ or 아이디어를 얻고 생각보다 간단하게 풀릴 것 같아서
   * 2차원 리스트를 헤집고 다녀야 하는 경우
   * 정확한 순위를 알아야 하는 경우(위상정렬이라고 생각했지만 알고보니 플와였다)
 * 지금까지 코테봤던 문제들 복습
+* 이진탐색 관련 내용들
+  * bl, br을 활용한 count_by_range
+  * 
