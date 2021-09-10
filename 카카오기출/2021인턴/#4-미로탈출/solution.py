@@ -57,7 +57,7 @@ def solution(vn, v_start, v_end, es, trap_vs):
     dist_2d_t[v_start][0] = 0
     h = [(dist_2d_t[v_start][0], v_start, 0)]  # 0은 상태를 뜻함.
 
-    # status에 i번 비트가 켜져있는가?
+    # status에 i번(노드) 비트가 켜져있는가?
     def bitmask(status, i):
         return (1 << trap_t[i]) & status
 
@@ -82,6 +82,8 @@ def solution(vn, v_start, v_end, es, trap_vs):
 
             next_status = status
             if trap_t[adj_v] != NON_TRAP:
+                # 다음에 나갈 곳이 트랩이라면
+                # 다음 v만큼 비트를 올려 xor 연산해주면 됨.
                 next_status ^= (1 << trap_t[adj_v])
 
             dist_new = dist + adj_dist
