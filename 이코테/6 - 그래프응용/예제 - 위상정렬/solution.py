@@ -16,7 +16,6 @@ q = deque([])
 for v in range(1, vn+1):
     if indegree_t[v] == 0:  # 꼴찌각 큐들 싹 다 큐에 넣음
         q.append(v)
-
 while q:
     v = q.popleft()  # 하나 뽑고
     print(v, end=' ')
