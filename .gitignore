@@ -3,3 +3,5 @@
 .DS_Store
 *.pdf
 test.py
+config.py
+*.json
