@@ -1,3 +1,6 @@
+
+
+
 from heapq import heappush, heappop
 n = int(input())
 h = []
