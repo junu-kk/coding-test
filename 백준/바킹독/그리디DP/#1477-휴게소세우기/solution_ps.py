@@ -7,7 +7,7 @@
 
 # notes
 최댓값의 최솟값 하니까 21카인턴 코테 5번이 생각나네..
-=> parametric search
+=> parametric search 연습 많이 해야겠다~
 
 
 
@@ -16,6 +16,8 @@
 
 # pseudo code
 
+각 휴게소 간의 거리가 mid 이하가 되도록 할 때 세워야 하는 휴게소의 개수가 m개 이하인가?가 True인 mid의 최솟값!
+
 
 
 '''
@@ -23,18 +25,18 @@ n, m, l = map(int, input().split())
 data = list(map(int, input().split()))
 
 data.append(0)
-data.append(l-1)
+data.append(l - 1)
 data.sort()
 
 start = (0)
 end = data[-1]
 while start <= end:
     cnt = 0
-    mid = (start+end) // 2
+    mid = (start + end) // 2
     for i in range(1, len(data)):
-        chai = data[i] - data[i-1]
+        chai = data[i] - data[i - 1]
         if chai > mid:
-            cnt += (chai-1) // mid
+            cnt += (chai - 1) // mid
 
     if cnt > m:
         start = mid + 1

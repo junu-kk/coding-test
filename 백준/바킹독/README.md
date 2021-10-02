@@ -2,5 +2,5 @@
 
 ## 더 보아야 하는 문제
 - [x] 회의실배정 2,3,4 (dp)
-- [ ] 휴게소세우기 (parametric search)
-- [ ] 외판원순회 (bitmasking + dp)
+- [x] 휴게소세우기 (parametric search)
+- [x] 외판원순회 (bitmasking + dp)
