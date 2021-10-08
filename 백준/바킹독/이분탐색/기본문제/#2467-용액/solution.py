@@ -29,12 +29,15 @@ hubo = [0, n - 1]
 while i < j:  # 두 용액은 겹칠 수 없으므로
     liq1, liq2 = liqs[i], liqs[j]
     mix = liq1 + liq2
+
+    if abs(mix) < abs(liqs[hubo[0]] + liqs[hubo[1]]):
+        hubo = [i, j]
+
     if mix == 0:
         print(liqs[i], liqs[j])
         exit()
 
-    if abs(mix) < abs(liqs[hubo[0]] + liqs[hubo[1]]):
-        hubo = [i, j]
+
 
     if mix > 0:  # 오른쪽을 줄이자.
         j -= 1
