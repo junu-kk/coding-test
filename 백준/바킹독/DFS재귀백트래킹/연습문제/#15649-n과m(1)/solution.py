@@ -13,8 +13,8 @@ def subsol(depth):
     for i in range(n):
         if visit_t[i]:
             continue
-
         num = i+1
+
         # 치고
         visit_t[i] = True
         s.append(num)

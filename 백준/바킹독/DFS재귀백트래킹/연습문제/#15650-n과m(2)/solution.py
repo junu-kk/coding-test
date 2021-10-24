@@ -26,4 +26,4 @@ def subsol(depth):
         s.pop()
 
 
-subsol(0, n, m)
+subsol(0)
