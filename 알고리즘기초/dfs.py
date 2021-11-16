@@ -1,25 +1,32 @@
-vn, en = map(int, input().split())
-es = []
-for _ in range(en):
-    es.append(list(map(int, input().split())))
+def dfs(v_start, graph):
+    vn = len(graph)
+    visit_t = [False] * vn
+    visit_t[v_start] = True
+    s = [v_start]
 
-graph = [[] for _ in range(vn+1)]
+    while s:
+        v = s.pop()
+        print(f'{v} 방문')
+        for adj_v in graph[v]:
+            if not visit_t[adj_v]:
+                s.append(adj_v)
+                visit_t[adj_v] = True
 
 
-for e in es:
-    v1, v2 = e
-    graph[v1].append(v2)
+v_start = 0
+graph = [[1, 2, 3], [0, 3], [0, 3], [0, 1, 2]]
+vn = 4
+visit_t = [False] * vn
 
 
-s = [1]
-visit_t = [False] * (vn+1)
-visit_t[1] = True
+def dfs_recursive(v):
+    visit_t[v] = True
+    print(f'{v} 방문')
 
-while s:
-    v = s.pop()
-    print(v, end=' ')
     for adj_v in graph[v]:
         if not visit_t[adj_v]:
-            s.append(adj_v)
-            visit_t[adj_v] = True
+            dfs_recursive(adj_v)
 
+
+dfs(0, [[1, 2, 3], [0, 3], [0, 3], [0, 1, 2]])
+dfs_recursive(0)
